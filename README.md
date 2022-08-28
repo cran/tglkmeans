@@ -9,8 +9,8 @@ coverage](https://codecov.io/gh/tanaylab/tglkmeans/branch/master/graph/badge.svg
 
 # tglkmeans - efficient implementation of kmeans++ algorithm
 
-This package provides R binding to a cpp implementation of kmeans++
-algorithm (<https://en.wikipedia.org/wiki/K-means%2B%2B>).
+This package provides R binding to a cpp implementation of the [kmeans++
+algorithm](<https://en.wikipedia.org/wiki/K-means%2B%2B>).
 
 ## Installation
 
@@ -18,7 +18,7 @@ You can install the released version of **tglkmeans** using the
 following command:
 
 ``` r
-install.packages('tglkmeans', repos=c(getOption('repos'), 'https://tanaylab.github.io/repo'))
+install.packages('tglkmeans')
 ```
 
 Or install the development version using:
