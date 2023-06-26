@@ -1,3 +1,17 @@
+# tglkmeans (development version)
+
+# tgkmeans 0.3.10
+
+* Removed broken link to one of the references in the description.
+
+# tgkmeans 0.3.9
+
+* Remove empty clusters. This may happen when the number of clusters is larger than the number of observations, and currently caused an error in the reordering step.
+
+# tglkmeans 0.3.8
+
+* Removed C++11 specification + require R >= 4.0.0.
+
 # tglkmeans 0.3.6
 
 * Fixed error on debian systems. 

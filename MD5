@@ -1,9 +1,9 @@
-aeeef4246e63682b49536360231e09f2 *DESCRIPTION
+3307bbb1ba4a6df1ebd3af2639a67179 *DESCRIPTION
 38d1d52743f08443f61c427ae3ee623a *LICENSE
 332ad49b0fca07e3f55f5253bee44377 *NAMESPACE
-05a749acb952d2ebbb5c0df46ba36780 *NEWS.md
+9c859c906aacc7fd3a74027741ae20b2 *NEWS.md
 015c99680720ccf70669802eaa3e94ae *R/RcppExports.R
-4e3dfc60f3476d5d3c7c557aed20a553 *R/TGL_kmeans.R
+d3c6b1045b86b4b4753e507b02d731a4 *R/TGL_kmeans.R
 ccbc79cadbeceabc95ea21a64dc1e0b3 *R/intra_clustering.R
 927308293da1df36bb43d888d51bc124 *R/misc.R
 dfd41c4a654ce95eeae8b7e2c2cc54a7 *R/tests.R
@@ -14,9 +14,9 @@ dae91644b1531e97605554b61e154880 *README.md
 2d554ebe784d70f90c642863cb500e8c *build/vignette.rds
 85dfa50537b2bd1e60e1c055995d9d44 *inst/doc/usage.R
 ba84f41d5f99023416ba15f2fa0c7d0a *inst/doc/usage.Rmd
-5c9fa71ed7c36810802148758a25ab4e *inst/doc/usage.html
-5c2820b830ae52ef0a994d79ee068dad *man/TGL_kmeans.Rd
-00e7c8496631e8333af19d8e3361a25f *man/TGL_kmeans_tidy.Rd
+efe96c019862bee518fa6dfcb6787a1b *inst/doc/usage.html
+ec30f175b5ade79c43212b51388e28bb *man/TGL_kmeans.Rd
+6a497051ec3f3c07c187619046cb0a01 *man/TGL_kmeans_tidy.Rd
 1f7896a1b866ff9ae89ba35be7c7b6f1 *man/pipe.Rd
 eadaadaa834d2e1a3b7484a7290b79f6 *man/simulate_data.Rd
 8d0529da21ffee52f48fa14bbceec1a5 *man/tglkmeans.Rd
