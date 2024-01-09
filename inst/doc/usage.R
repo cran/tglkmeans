@@ -1,19 +1,22 @@
-## ---- echo = FALSE, message = FALSE-------------------------------------------
+## ----echo = FALSE, message = FALSE--------------------------------------------
 library(dplyr)
 library(ggplot2)
 library(tglkmeans)
+theme_set(theme_classic())
+set.seed(60427)
 
 ## -----------------------------------------------------------------------------
 data <- simulate_data(n = 100, sd = 0.3, nclust = 5, dims = 2)
 data
 
-## ---- fig.show='hold'---------------------------------------------------------
+## ----fig.show='hold'----------------------------------------------------------
 data %>% ggplot(aes(x = V1, y = V2, color = factor(true_clust))) +
     geom_point() +
     scale_color_discrete(name = "true cluster")
 
 ## -----------------------------------------------------------------------------
-data_for_clust <- data %>% select(id, starts_with("V"))
+rownames(data) <- data$id
+data_for_clust <- data %>% select(starts_with("V"))
 km <- TGL_kmeans_tidy(data_for_clust,
     k = 5,
     metric = "euclid",
@@ -36,7 +39,7 @@ km$size
 d <- tglkmeans:::match_clusters(data, km, 5)
 sum(d$true_clust == d$new_clust, na.rm = TRUE) / sum(!is.na(d$new_clust))
 
-## ---- fig.show='hold'---------------------------------------------------------
+## ----fig.show='hold'----------------------------------------------------------
 d %>% ggplot(aes(x = V1, y = V2, color = factor(new_clust), shape = factor(true_clust))) +
     geom_point() +
     scale_color_discrete(name = "cluster") +
@@ -65,7 +68,7 @@ km <- TGL_kmeans_tidy(data %>% select(id, starts_with("V")),
 d <- tglkmeans:::match_clusters(data, km, 5)
 sum(d$true_clust == d$new_clust, na.rm = TRUE) / sum(!is.na(d$new_clust))
 
-## ---- fig.show='hold'---------------------------------------------------------
+## ----fig.show='hold'----------------------------------------------------------
 d %>% ggplot(aes(x = V1, y = V2, color = factor(new_clust), shape = factor(true_clust))) +
     geom_point() +
     scale_color_discrete(name = "cluster") +
@@ -77,7 +80,8 @@ data <- simulate_data(n = 100, sd = 0.3, nclust = 30, dims = 300)
 km <- TGL_kmeans_tidy(data %>% select(id, starts_with("V")),
     k = 30,
     metric = "euclid",
-    verbose = FALSE
+    verbose = FALSE,
+    id_column = TRUE
 )
 
 ## -----------------------------------------------------------------------------
@@ -92,13 +96,13 @@ d <- tglkmeans:::match_clusters(data, km_standard, 30)
 sum(d$true_clust == d$new_clust, na.rm = TRUE) / sum(!is.na(d$new_clust))
 
 ## -----------------------------------------------------------------------------
-km1 <- TGL_kmeans_tidy(data %>% select(id, starts_with("V")),
+km1 <- TGL_kmeans_tidy(data %>% select(starts_with("V")),
     k = 30,
     metric = "euclid",
     verbose = FALSE,
     seed = 60427
 )
-km2 <- TGL_kmeans_tidy(data %>% select(id, starts_with("V")),
+km2 <- TGL_kmeans_tidy(data %>% select(starts_with("V")),
     k = 30,
     metric = "euclid",
     verbose = FALSE,
