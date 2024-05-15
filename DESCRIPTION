@@ -1,6 +1,6 @@
 Package: tglkmeans
 Title: Efficient Implementation of K-Means++ Algorithm
-Version: 0.5.4
+Version: 0.5.5
 Authors@R: c(
     person("Aviezer", "Lifshitz", , "aviezer.lifshitz@weizmann.ac.il", role = c("aut", "cre")),
     person("Amos", "Tanay", role = "aut"),
@@ -24,9 +24,9 @@ BugReports: https://github.com/tanaylab/tglkmeans/issues
 URL: https://tanaylab.github.io/tglkmeans/,
         https://github.com/tanaylab/tglkmeans
 Depends: R (>= 4.0.0)
-Imports: cli, doFuture, dplyr (>= 0.5.0), future, ggplot2 (>= 2.2.0),
-        magrittr, Matrix, methods, parallel (>= 3.3.2), plyr (>=
-        1.8.4), purrr (>= 0.2.0), Rcpp (>= 0.12.11), RcppParallel,
+Imports: cli, doFuture, doRNG, dplyr (>= 0.5.0), future, ggplot2 (>=
+        2.2.0), magrittr, Matrix, methods, parallel (>= 3.3.2), plyr
+        (>= 1.8.4), purrr (>= 0.2.0), Rcpp (>= 0.12.11), RcppParallel,
         tgstat (>= 1.0.0), tibble (>= 3.1.2)
 Suggests: covr, knitr, rlang, rmarkdown, testthat, withr
 LinkingTo: Rcpp, RcppParallel
@@ -36,8 +36,8 @@ Config/testthat/parallel: false
 Encoding: UTF-8
 NeedsCompilation: yes
 OS_type: unix
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1
 SystemRequirements: GNU make
-Packaged: 2024-01-09 13:00:04 UTC; aviezerl
+Packaged: 2024-05-15 08:12:29 UTC; aviezerl
 Repository: CRAN
-Date/Publication: 2024-01-09 14:10:02 UTC
+Date/Publication: 2024-05-15 08:40:02 UTC
